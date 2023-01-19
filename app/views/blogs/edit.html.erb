@@ -1,0 +1,6 @@
+<div class="form">
+    <h1> Edit blog </h1>
+
+    <%= render "form", blog: @blog %>
+    <%= link_to "delete", @blog, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+</div>

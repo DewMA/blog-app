@@ -1,0 +1,14 @@
+
+<%= form_with(url: admin_path, local: true) do |a| %>
+    <% if flash[:wrong_password] %>
+        <div class="errors">
+            <p><%= flash[:wrong_password] %></p>
+        </div>
+    <% end %>
+
+    <%= a.label :username %>
+    <%= a.text_field :username %>
+    <%= a.label :password %>
+    <%= a.password_field :password%>
+    <%= a.submit "Sign In", class: "form-btn" %>
+<% end %>

@@ -1,0 +1,10 @@
+<div class="blogs_container">
+    <% @blogs.each do |b|%>
+        <div class="blog" onclick="window.location.href = '<%= blog_path(b) %>'">
+            <h2><%= b.title %></h2>
+            <p class="publish_date"> published <%= time_ago_in_words(b.created_at) %> ago</p>
+            <hr>
+            <p><%= truncate(b.description, length: 250) %></p>
+        </div>
+    <% end %>
+</div>
